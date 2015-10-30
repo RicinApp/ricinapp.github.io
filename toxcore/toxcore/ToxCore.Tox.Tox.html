@@ -27,6 +27,7 @@
         </ul>
         <hr class="navi_hr"/>
         <ul class="navi_main">
+          <li class="enum"><a href="ToxCore.Tox.CHAT_CHANGE_PEER.html">CHAT_CHANGE_PEER</a></li>
           <li class="property"><a href="ToxCore.Tox.nospam.html">nospam</a></li>
           <li class="property"><a href="ToxCore.Tox.status.html">status</a></li>
           <li class="delegate"><a href="ToxCore.Tox.ConnectionStatusFunc.html">ConnectionStatusFunc</a></li>
@@ -35,15 +36,23 @@
           <li class="delegate"><a href="ToxCore.Tox.FileRecvChunkFunc.html">FileRecvChunkFunc</a></li>
           <li class="delegate"><a href="ToxCore.Tox.FileRecvFunc.html">FileRecvFunc</a></li>
           <li class="delegate"><a href="ToxCore.Tox.FriendConnectionStatusFunc.html">FriendConnectionStatusFunc</a></li>
+          <li class="delegate"><a href="ToxCore.Tox.FriendLosslessPacketFunc.html">FriendLosslessPacketFunc</a></li>
+          <li class="delegate"><a href="ToxCore.Tox.FriendLossyPacketFunc.html">FriendLossyPacketFunc</a></li>
           <li class="delegate"><a href="ToxCore.Tox.FriendMessageFunc.html">FriendMessageFunc</a></li>
           <li class="delegate"><a href="ToxCore.Tox.FriendNameFunc.html">FriendNameFunc</a></li>
           <li class="delegate"><a href="ToxCore.Tox.FriendRequestFunc.html">FriendRequestFunc</a></li>
           <li class="delegate"><a href="ToxCore.Tox.FriendStatusFunc.html">FriendStatusFunc</a></li>
           <li class="delegate"><a href="ToxCore.Tox.FriendStatusMessageFunc.html">FriendStatusMessageFunc</a></li>
           <li class="delegate"><a href="ToxCore.Tox.FriendTypingFunc.html">FriendTypingFunc</a></li>
+          <li class="delegate"><a href="ToxCore.Tox.GroupActionFunc.html">GroupActionFunc</a></li>
+          <li class="delegate"><a href="ToxCore.Tox.GroupInviteFunc.html">GroupInviteFunc</a></li>
+          <li class="delegate"><a href="ToxCore.Tox.GroupMessageFunc.html">GroupMessageFunc</a></li>
+          <li class="delegate"><a href="ToxCore.Tox.GroupNamelistChangeFunc.html">GroupNamelistChangeFunc</a></li>
+          <li class="delegate"><a href="ToxCore.Tox.GroupTitleFunc.html">GroupTitleFunc</a></li>
           <li class="delegate"><a href="ToxCore.Tox.ReadReceiptFunc.html">ReadReceiptFunc</a></li>
           <li class="static_method"><a href="ToxCore.Tox.hash.html">hash</a></li>
           <li class="creation_method">Tox</li>
+          <li class="method"><a href="ToxCore.Tox.add_groupchat.html">add_groupchat</a></li>
           <li class="method"><a href="ToxCore.Tox.add_tcp_relay.html">add_tcp_relay</a></li>
           <li class="method"><a href="ToxCore.Tox.bootstrap.html">bootstrap</a></li>
           <li class="method"><a href="ToxCore.Tox.callback_file_chunk_request.html">callback_file_chunk_request</a></li>
@@ -51,6 +60,8 @@
           <li class="method"><a href="ToxCore.Tox.callback_file_recv_chunk.html">callback_file_recv_chunk</a></li>
           <li class="method"><a href="ToxCore.Tox.callback_file_recv_control.html">callback_file_recv_control</a></li>
           <li class="method"><a href="ToxCore.Tox.callback_friend_connection_status.html">callback_friend_connection_status</a></li>
+          <li class="method"><a href="ToxCore.Tox.callback_friend_lossless_packet.html">callback_friend_lossless_packet</a></li>
+          <li class="method"><a href="ToxCore.Tox.callback_friend_lossy_packet.html">callback_friend_lossy_packet</a></li>
           <li class="method"><a href="ToxCore.Tox.callback_friend_message.html">callback_friend_message</a></li>
           <li class="method"><a href="ToxCore.Tox.callback_friend_name.html">callback_friend_name</a></li>
           <li class="method"><a href="ToxCore.Tox.callback_friend_read_receipt.html">callback_friend_read_receipt</a></li>
@@ -58,7 +69,14 @@
           <li class="method"><a href="ToxCore.Tox.callback_friend_status.html">callback_friend_status</a></li>
           <li class="method"><a href="ToxCore.Tox.callback_friend_status_message.html">callback_friend_status_message</a></li>
           <li class="method"><a href="ToxCore.Tox.callback_friend_typing.html">callback_friend_typing</a></li>
+          <li class="method"><a href="ToxCore.Tox.callback_group_action.html">callback_group_action</a></li>
+          <li class="method"><a href="ToxCore.Tox.callback_group_invite.html">callback_group_invite</a></li>
+          <li class="method"><a href="ToxCore.Tox.callback_group_message.html">callback_group_message</a></li>
+          <li class="method"><a href="ToxCore.Tox.callback_group_namelist_change.html">callback_group_namelist_change</a></li>
+          <li class="method"><a href="ToxCore.Tox.callback_group_title.html">callback_group_title</a></li>
           <li class="method"><a href="ToxCore.Tox.callback_self_connection_status.html">callback_self_connection_status</a></li>
+          <li class="method"><a href="ToxCore.Tox.count_chatlist.html">count_chatlist</a></li>
+          <li class="method"><a href="ToxCore.Tox.del_groupchat.html">del_groupchat</a></li>
           <li class="method"><a href="ToxCore.Tox.file_control.html">file_control</a></li>
           <li class="method"><a href="ToxCore.Tox.file_get_file_id.html">file_get_file_id</a></li>
           <li class="method"><a href="ToxCore.Tox.file_seek.html">file_seek</a></li>
@@ -78,11 +96,25 @@
           <li class="method"><a href="ToxCore.Tox.friend_get_status_message.html">friend_get_status_message</a></li>
           <li class="method"><a href="ToxCore.Tox.friend_get_status_message_size.html">friend_get_status_message_size</a></li>
           <li class="method"><a href="ToxCore.Tox.friend_get_typing.html">friend_get_typing</a></li>
+          <li class="method"><a href="ToxCore.Tox.friend_send_lossless_packet.html">friend_send_lossless_packet</a></li>
+          <li class="method"><a href="ToxCore.Tox.friend_send_lossy_packet.html">friend_send_lossy_packet</a></li>
           <li class="method"><a href="ToxCore.Tox.friend_send_message.html">friend_send_message</a></li>
+          <li class="method"><a href="ToxCore.Tox.get_chatlist.html">get_chatlist</a></li>
           <li class="method"><a href="ToxCore.Tox.get_savedata.html">get_savedata</a></li>
           <li class="method"><a href="ToxCore.Tox.get_savedata_size.html">get_savedata_size</a></li>
+          <li class="method"><a href="ToxCore.Tox.group_action_send.html">group_action_send</a></li>
+          <li class="method"><a href="ToxCore.Tox.group_get_title.html">group_get_title</a></li>
+          <li class="method"><a href="ToxCore.Tox.group_get_type.html">group_get_type</a></li>
+          <li class="method"><a href="ToxCore.Tox.group_message_send.html">group_message_send</a></li>
+          <li class="method"><a href="ToxCore.Tox.group_number_peers.html">group_number_peers</a></li>
+          <li class="method"><a href="ToxCore.Tox.group_peer_pubkey.html">group_peer_pubkey</a></li>
+          <li class="method"><a href="ToxCore.Tox.group_peername.html">group_peername</a></li>
+          <li class="method"><a href="ToxCore.Tox.group_peernumber_is_ours.html">group_peernumber_is_ours</a></li>
+          <li class="method"><a href="ToxCore.Tox.group_set_title.html">group_set_title</a></li>
+          <li class="method"><a href="ToxCore.Tox.invite_friend.html">invite_friend</a></li>
           <li class="method"><a href="ToxCore.Tox.iterate.html">iterate</a></li>
           <li class="method"><a href="ToxCore.Tox.iteration_interval.html">iteration_interval</a></li>
+          <li class="method"><a href="ToxCore.Tox.join_groupchat.html">join_groupchat</a></li>
           <li class="method"><a href="ToxCore.Tox.self_get_address.html">self_get_address</a></li>
           <li class="method"><a href="ToxCore.Tox.self_get_connection_status.html">self_get_connection_status</a></li>
           <li class="method"><a href="ToxCore.Tox.self_get_dht_id.html">self_get_dht_id</a></li>

@@ -27,6 +27,7 @@
         </ul>
         <hr class="navi_hr"/>
         <ul class="navi_main">
+          <li class="enum"><a href="ToxCore.Tox.CHAT_CHANGE_PEER.html">CHAT_CHANGE_PEER</a></li>
           <li class="property"><a href="ToxCore.Tox.nospam.html">nospam</a></li>
           <li class="property"><a href="ToxCore.Tox.status.html">status</a></li>
           <li class="delegate"><a href="ToxCore.Tox.ConnectionStatusFunc.html">ConnectionStatusFunc</a></li>
@@ -35,15 +36,23 @@
           <li class="delegate"><a href="ToxCore.Tox.FileRecvChunkFunc.html">FileRecvChunkFunc</a></li>
           <li class="delegate"><a href="ToxCore.Tox.FileRecvFunc.html">FileRecvFunc</a></li>
           <li class="delegate"><a href="ToxCore.Tox.FriendConnectionStatusFunc.html">FriendConnectionStatusFunc</a></li>
+          <li class="delegate"><a href="ToxCore.Tox.FriendLosslessPacketFunc.html">FriendLosslessPacketFunc</a></li>
+          <li class="delegate"><a href="ToxCore.Tox.FriendLossyPacketFunc.html">FriendLossyPacketFunc</a></li>
           <li class="delegate"><a href="ToxCore.Tox.FriendMessageFunc.html">FriendMessageFunc</a></li>
           <li class="delegate"><a href="ToxCore.Tox.FriendNameFunc.html">FriendNameFunc</a></li>
           <li class="delegate"><a href="ToxCore.Tox.FriendRequestFunc.html">FriendRequestFunc</a></li>
           <li class="delegate"><a href="ToxCore.Tox.FriendStatusFunc.html">FriendStatusFunc</a></li>
           <li class="delegate"><a href="ToxCore.Tox.FriendStatusMessageFunc.html">FriendStatusMessageFunc</a></li>
           <li class="delegate"><a href="ToxCore.Tox.FriendTypingFunc.html">FriendTypingFunc</a></li>
+          <li class="delegate"><a href="ToxCore.Tox.GroupActionFunc.html">GroupActionFunc</a></li>
+          <li class="delegate"><a href="ToxCore.Tox.GroupInviteFunc.html">GroupInviteFunc</a></li>
+          <li class="delegate"><a href="ToxCore.Tox.GroupMessageFunc.html">GroupMessageFunc</a></li>
+          <li class="delegate"><a href="ToxCore.Tox.GroupNamelistChangeFunc.html">GroupNamelistChangeFunc</a></li>
+          <li class="delegate"><a href="ToxCore.Tox.GroupTitleFunc.html">GroupTitleFunc</a></li>
           <li class="delegate"><a href="ToxCore.Tox.ReadReceiptFunc.html">ReadReceiptFunc</a></li>
           <li class="static_method"><a href="ToxCore.Tox.hash.html">hash</a></li>
           <li class="creation_method"><a href="ToxCore.Tox.Tox.html">Tox</a></li>
+          <li class="method"><a href="ToxCore.Tox.add_groupchat.html">add_groupchat</a></li>
           <li class="method"><a href="ToxCore.Tox.add_tcp_relay.html">add_tcp_relay</a></li>
           <li class="method"><a href="ToxCore.Tox.bootstrap.html">bootstrap</a></li>
           <li class="method"><a href="ToxCore.Tox.callback_file_chunk_request.html">callback_file_chunk_request</a></li>
@@ -51,6 +60,8 @@
           <li class="method"><a href="ToxCore.Tox.callback_file_recv_chunk.html">callback_file_recv_chunk</a></li>
           <li class="method"><a href="ToxCore.Tox.callback_file_recv_control.html">callback_file_recv_control</a></li>
           <li class="method"><a href="ToxCore.Tox.callback_friend_connection_status.html">callback_friend_connection_status</a></li>
+          <li class="method"><a href="ToxCore.Tox.callback_friend_lossless_packet.html">callback_friend_lossless_packet</a></li>
+          <li class="method"><a href="ToxCore.Tox.callback_friend_lossy_packet.html">callback_friend_lossy_packet</a></li>
           <li class="method"><a href="ToxCore.Tox.callback_friend_message.html">callback_friend_message</a></li>
           <li class="method"><a href="ToxCore.Tox.callback_friend_name.html">callback_friend_name</a></li>
           <li class="method"><a href="ToxCore.Tox.callback_friend_read_receipt.html">callback_friend_read_receipt</a></li>
@@ -58,7 +69,14 @@
           <li class="method"><a href="ToxCore.Tox.callback_friend_status.html">callback_friend_status</a></li>
           <li class="method"><a href="ToxCore.Tox.callback_friend_status_message.html">callback_friend_status_message</a></li>
           <li class="method"><a href="ToxCore.Tox.callback_friend_typing.html">callback_friend_typing</a></li>
+          <li class="method"><a href="ToxCore.Tox.callback_group_action.html">callback_group_action</a></li>
+          <li class="method"><a href="ToxCore.Tox.callback_group_invite.html">callback_group_invite</a></li>
+          <li class="method"><a href="ToxCore.Tox.callback_group_message.html">callback_group_message</a></li>
+          <li class="method"><a href="ToxCore.Tox.callback_group_namelist_change.html">callback_group_namelist_change</a></li>
+          <li class="method"><a href="ToxCore.Tox.callback_group_title.html">callback_group_title</a></li>
           <li class="method"><a href="ToxCore.Tox.callback_self_connection_status.html">callback_self_connection_status</a></li>
+          <li class="method"><a href="ToxCore.Tox.count_chatlist.html">count_chatlist</a></li>
+          <li class="method"><a href="ToxCore.Tox.del_groupchat.html">del_groupchat</a></li>
           <li class="method"><a href="ToxCore.Tox.file_control.html">file_control</a></li>
           <li class="method"><a href="ToxCore.Tox.file_get_file_id.html">file_get_file_id</a></li>
           <li class="method"><a href="ToxCore.Tox.file_seek.html">file_seek</a></li>
@@ -78,11 +96,25 @@
           <li class="method"><a href="ToxCore.Tox.friend_get_status_message.html">friend_get_status_message</a></li>
           <li class="method"><a href="ToxCore.Tox.friend_get_status_message_size.html">friend_get_status_message_size</a></li>
           <li class="method"><a href="ToxCore.Tox.friend_get_typing.html">friend_get_typing</a></li>
+          <li class="method"><a href="ToxCore.Tox.friend_send_lossless_packet.html">friend_send_lossless_packet</a></li>
+          <li class="method"><a href="ToxCore.Tox.friend_send_lossy_packet.html">friend_send_lossy_packet</a></li>
           <li class="method"><a href="ToxCore.Tox.friend_send_message.html">friend_send_message</a></li>
+          <li class="method"><a href="ToxCore.Tox.get_chatlist.html">get_chatlist</a></li>
           <li class="method"><a href="ToxCore.Tox.get_savedata.html">get_savedata</a></li>
           <li class="method"><a href="ToxCore.Tox.get_savedata_size.html">get_savedata_size</a></li>
+          <li class="method"><a href="ToxCore.Tox.group_action_send.html">group_action_send</a></li>
+          <li class="method"><a href="ToxCore.Tox.group_get_title.html">group_get_title</a></li>
+          <li class="method"><a href="ToxCore.Tox.group_get_type.html">group_get_type</a></li>
+          <li class="method"><a href="ToxCore.Tox.group_message_send.html">group_message_send</a></li>
+          <li class="method"><a href="ToxCore.Tox.group_number_peers.html">group_number_peers</a></li>
+          <li class="method"><a href="ToxCore.Tox.group_peer_pubkey.html">group_peer_pubkey</a></li>
+          <li class="method"><a href="ToxCore.Tox.group_peername.html">group_peername</a></li>
+          <li class="method"><a href="ToxCore.Tox.group_peernumber_is_ours.html">group_peernumber_is_ours</a></li>
+          <li class="method"><a href="ToxCore.Tox.group_set_title.html">group_set_title</a></li>
+          <li class="method"><a href="ToxCore.Tox.invite_friend.html">invite_friend</a></li>
           <li class="method"><a href="ToxCore.Tox.iterate.html">iterate</a></li>
           <li class="method"><a href="ToxCore.Tox.iteration_interval.html">iteration_interval</a></li>
+          <li class="method"><a href="ToxCore.Tox.join_groupchat.html">join_groupchat</a></li>
           <li class="method"><a href="ToxCore.Tox.self_get_address.html">self_get_address</a></li>
           <li class="method"><a href="ToxCore.Tox.self_get_connection_status.html">self_get_connection_status</a></li>
           <li class="method"><a href="ToxCore.Tox.self_get_dht_id.html">self_get_dht_id</a></li>
@@ -124,6 +156,10 @@
         <div class="package_note"><b>Package:</b> <a href="index.htm">toxcore</a>
         </div>
         <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Enums:</h3>
+        <ul class="navi_inline">
+          <li class="enum"><a href="ToxCore.Tox.CHAT_CHANGE_PEER.html">CHAT_CHANGE_PEER</a> - </li>
+        </ul>
         <h3 class="main_title">Properties:</h3>
         <ul class="navi_inline">
           <li class="property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_type"><a href="ToxCore.UserStatus.html" class="enum">UserStatus</a></span> <b><a href="ToxCore.Tox.status.html" class="property">status</a></b> { <span class="main_keyword">set</span>; <span class="main_keyword">get</span>; }
@@ -196,6 +232,34 @@
           <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="ToxCore.Tox.ConnectionStatusFunc.html" class="delegate">ConnectionStatusFunc</a></b> (<span class="main_type"><span class="class">Tox</span></span> self, <span class="main_type"><a href="ToxCore.ConnectionStatus.html" class="enum">ConnectionStatus</a></span> connection_status)
             </span>
             <div class="leaf_brief_description">
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="ToxCore.Tox.FriendLossyPacketFunc.html" class="delegate">FriendLossyPacketFunc</a></b> (<span class="main_type"><span class="class">Tox</span></span> self, <span class="main_basic_type"><span class="struct">uint32</span></span> friend_number, <span class="main_basic_type"><span class="struct">uint8</span></span>[] data)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="ToxCore.Tox.FriendLosslessPacketFunc.html" class="delegate">FriendLosslessPacketFunc</a></b> (<span class="main_type"><span class="class">Tox</span></span> self, <span class="main_basic_type"><span class="struct">uint32</span></span> friend_number, <span class="main_basic_type"><span class="struct">uint8</span></span>[] data)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="ToxCore.Tox.GroupInviteFunc.html" class="delegate">GroupInviteFunc</a></b> (<span class="main_type"><span class="class">Tox</span></span> self, <span class="main_basic_type"><span class="struct">uint32</span></span> friend_number, <span class="main_basic_type"><span class="struct">uint8</span></span>[] type, <span class="main_basic_type"><span class="struct">uint8</span></span>[] data)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The callback for group invites</span>
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="ToxCore.Tox.GroupMessageFunc.html" class="delegate">GroupMessageFunc</a></b> (<span class="main_type"><span class="class">Tox</span></span> self, <span class="main_basic_type"><span class="struct">int</span></span> group_number, <span class="main_basic_type"><span class="struct">int</span></span> peer_number, <span class="main_basic_type"><span class="struct">uint8</span></span>[] message)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="ToxCore.Tox.GroupActionFunc.html" class="delegate">GroupActionFunc</a></b> (<span class="main_type"><span class="class">Tox</span></span> self, <span class="main_basic_type"><span class="struct">int</span></span> group_number, <span class="main_basic_type"><span class="struct">int</span></span> peer_number, <span class="main_basic_type"><span class="struct">uint8</span></span>[] action)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The callback for group actions</span>
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="ToxCore.Tox.GroupTitleFunc.html" class="delegate">GroupTitleFunc</a></b> (<span class="main_type"><span class="class">Tox</span></span> self, <span class="main_basic_type"><span class="struct">int</span></span> group_number, <span class="main_basic_type"><span class="struct">int</span></span> peer_number, <span class="main_basic_type"><span class="struct">uint8</span></span>[] title)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The callback for title changes</span>
+            </div></li>
+          <li class="delegate"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">delegate</span> <span class="main_keyword">void</span> <b><a href="ToxCore.Tox.GroupNamelistChangeFunc.html" class="delegate">GroupNamelistChangeFunc</a></b> (<span class="main_type"><span class="class">Tox</span></span> self, <span class="main_basic_type"><span class="struct">int</span></span> group_number, <span class="main_basic_type"><span class="struct">int</span></span> peer_number, <span class="main_type"><a href="ToxCore.Tox.CHAT_CHANGE_PEER.html" class="enum">CHAT_CHANGE_PEER</a></span> change_type)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">The callback for peer name list changes</span>
             </div></li>
         </ul>
         <h3 class="main_title">Static methods:</h3>
@@ -469,6 +533,112 @@
             </span>
             <div class="leaf_brief_description"><span class="brief_description">The main loop that needs to be run in intervals of 
                 tox_iteration_interval() milliseconds.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">bool</span></span> <b><a href="ToxCore.Tox.friend_send_lossy_packet.html" class="method">friend_send_lossy_packet</a></b> (<span class="main_basic_type"><span class="struct">uint32</span></span> friend_number, <span class="main_basic_type"><span class="struct">uint8</span></span>[] data, <span class="main_keyword">out</span> <span class="main_type"><a href="ToxCore.ERR_FRIEND_CUSTOM_PACKET.html" class="enum">ERR_FRIEND_CUSTOM_PACKET</a></span>? error)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Send a custom lossy packet to a friend.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">bool</span></span> <b><a href="ToxCore.Tox.friend_send_lossless_packet.html" class="method">friend_send_lossless_packet</a></b> (<span class="main_basic_type"><span class="struct">uint32</span></span> friend_number, <span class="main_basic_type"><span class="struct">uint8</span></span>[] data, <span class="main_keyword">out</span> <span class="main_type"><a href="ToxCore.ERR_FRIEND_CUSTOM_PACKET.html" class="enum">ERR_FRIEND_CUSTOM_PACKET</a></span>? error)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Send a custom lossless packet to a friend.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="ToxCore.Tox.callback_friend_lossy_packet.html" class="method">callback_friend_lossy_packet</a></b> (<span class="main_type"><a href="ToxCore.Tox.FriendLossyPacketFunc.html" class="delegate">FriendLossyPacketFunc</a></span> callback)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Set the callback for the `friend_lossy_packet` event. Pass NULL to 
+                unset.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="ToxCore.Tox.callback_friend_lossless_packet.html" class="method">callback_friend_lossless_packet</a></b> (<span class="main_type"><a href="ToxCore.Tox.FriendLosslessPacketFunc.html" class="delegate">FriendLosslessPacketFunc</a></span> callback)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Set the callback for the `friend_lossless_packet` event. Pass NULL to 
+                unset.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="ToxCore.Tox.callback_group_invite.html" class="method">callback_group_invite</a></b> (<span class="main_type"><a href="ToxCore.Tox.GroupInviteFunc.html" class="delegate">GroupInviteFunc</a></span> callback)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Set the callback for group invites.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="ToxCore.Tox.callback_group_message.html" class="method">callback_group_message</a></b> (<span class="main_type"><a href="ToxCore.Tox.GroupMessageFunc.html" class="delegate">GroupMessageFunc</a></span> callback)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Set the callback for group messages.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="ToxCore.Tox.callback_group_action.html" class="method">callback_group_action</a></b> (<span class="main_type"><a href="ToxCore.Tox.GroupActionFunc.html" class="delegate">GroupActionFunc</a></span> callback)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Set the callback for group actions.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="ToxCore.Tox.callback_group_title.html" class="method">callback_group_title</a></b> (<span class="main_type"><a href="ToxCore.Tox.GroupTitleFunc.html" class="delegate">GroupTitleFunc</a></span> callback)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Set callback function for title changes.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="ToxCore.Tox.callback_group_namelist_change.html" class="method">callback_group_namelist_change</a></b> (<span class="main_type"><a href="ToxCore.Tox.GroupNamelistChangeFunc.html" class="delegate">GroupNamelistChangeFunc</a></span> callback)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Set callback function for peer name list changes.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">int</span></span> <b><a href="ToxCore.Tox.add_groupchat.html" class="method">add_groupchat</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Creates a new groupchat and puts it in the chats array.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">int</span></span> <b><a href="ToxCore.Tox.del_groupchat.html" class="method">del_groupchat</a></b> (<span class="main_basic_type"><span class="struct">int</span></span> group_number)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Delete a groupchat from the chats array.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">int</span></span> <b><a href="ToxCore.Tox.group_peername.html" class="method">group_peername</a></b> (<span class="main_basic_type"><span class="struct">int</span></span> group_number, <span class="main_basic_type"><span class="struct">int</span></span> peer_number, <span class="main_keyword">out</span> <span class="main_basic_type"><span class="struct">uint8</span></span>[] name)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Copy the name of peernumber who is in groupnumber to name. name must 
+                be at least TOX_MAX_NAME_LENGTH long.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">int</span></span> <b><a href="ToxCore.Tox.group_peer_pubkey.html" class="method">group_peer_pubkey</a></b> (<span class="main_basic_type"><span class="struct">int</span></span> group_number, <span class="main_basic_type"><span class="struct">int</span></span> peer_number, <span class="main_keyword">out</span> <span class="main_basic_type"><span class="struct">uint8</span></span>[] public_key)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Copy the public key of peernumber who is in groupnumber to public_key.
+                public_key must be TOX_PUBLIC_KEY_SIZE long.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">int</span></span> <b><a href="ToxCore.Tox.invite_friend.html" class="method">invite_friend</a></b> (<span class="main_basic_type"><span class="struct">int32</span></span> friend_number, <span class="main_basic_type"><span class="struct">int</span></span> group_number)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">invite friendnumber to groupnumber</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">int</span></span> <b><a href="ToxCore.Tox.join_groupchat.html" class="method">join_groupchat</a></b> (<span class="main_basic_type"><span class="struct">int32</span></span> friend_number, <span class="main_basic_type"><span class="struct">uint8</span></span>[] data)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Join a group (you need to have been invited first.) using data of 
+                length obtained in the group invite callback.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">int</span></span> <b><a href="ToxCore.Tox.group_message_send.html" class="method">group_message_send</a></b> (<span class="main_basic_type"><span class="struct">int</span></span> group_number, <span class="main_basic_type"><span class="struct">uint8</span></span>[] message)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">send a group message</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">int</span></span> <b><a href="ToxCore.Tox.group_action_send.html" class="method">group_action_send</a></b> (<span class="main_basic_type"><span class="struct">int</span></span> group_number, <span class="main_basic_type"><span class="struct">uint8</span></span>[] action)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">send a group action</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">int</span></span> <b><a href="ToxCore.Tox.group_set_title.html" class="method">group_set_title</a></b> (<span class="main_basic_type"><span class="struct">int</span></span> group_number, <span class="main_basic_type"><span class="struct">uint8</span></span>[] title)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">set the group's title, limited to MAX_NAME_LENGTH</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">int</span></span> <b><a href="ToxCore.Tox.group_get_title.html" class="method">group_get_title</a></b> (<span class="main_basic_type"><span class="struct">int</span></span> group_number, <span class="main_keyword">out</span> <span class="main_basic_type"><span class="struct">uint8</span></span>[] title, <span class="main_basic_type"><span class="struct">uint32</span></span> max_length)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Get group title from groupnumber and put it in title. title needs to 
+                be a valid memory location with a max_length size of at least MAX_NAME_LENGTH (128) bytes.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">int</span></span> <b><a href="ToxCore.Tox.group_peernumber_is_ours.html" class="method">group_peernumber_is_ours</a></b> (<span class="main_basic_type"><span class="struct">int</span></span> group_number, <span class="main_basic_type"><span class="struct">int</span></span> peer_number)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Check if the current peernumber corresponds to ours.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">int</span></span> <b><a href="ToxCore.Tox.group_number_peers.html" class="method">group_number_peers</a></b> (<span class="main_basic_type"><span class="struct">int</span></span> group_number)
+            </span>
+            <div class="leaf_brief_description">
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">uint32</span></span> <b><a href="ToxCore.Tox.count_chatlist.html" class="method">count_chatlist</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Return the number of chats in the instance m. You should use this to 
+                determine how much memory to allocate for copy_chatlist.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">uint32</span></span> <b><a href="ToxCore.Tox.get_chatlist.html" class="method">get_chatlist</a></b> (<span class="main_keyword">out</span> <span class="main_basic_type"><span class="struct">int32</span></span>[] out_list)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Copy a list of valid chat IDs into the array out_list. If out_list is 
+                NULL, returns 0. Otherwise, returns the number of elements copied. If the array was too small, the contents of out_list will be 
+                truncated to list_size.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">int</span></span> <b><a href="ToxCore.Tox.group_get_type.html" class="method">group_get_type</a></b> (<span class="main_basic_type"><span class="struct">int</span></span> group_number)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">return the type of groupchat (TOX_GROUPCHAT_TYPE_) that groupnumber 
+                is.</span>
             </div></li>
         </ul>
       </div>
