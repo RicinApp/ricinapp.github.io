@@ -37,10 +37,9 @@ function toggle_box (self, id) {
 
 	if (element.style.display == 'block') {
 		element.style.display = 'none';
-		self.src = get_path (self.src) + 'coll_open.png';
+		self.src = get_path (self.src) + 'coll_open.svg';
 	} else {
 		element.style.display = 'block';
-		self.src = get_path (self.src) + 'coll_close.png';
+		self.src = get_path (self.src) + 'coll_close.svg';
 	}
 }
-
