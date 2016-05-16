@@ -45,6 +45,13 @@
         <hr class="main_hr"/>
         <h2 class="main_title">Description:</h2>
         <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">bool</span></span> <b><span class="method">derive_key_from_pass</span></b> (<span class="main_basic_type"><span class="struct">uint8</span></span>[] passphrase, <span class="main_keyword">out</span> <span class="main_type"><a href="ToxEncrypt.PassKey.html" class="class">PassKey</a></span> out_key, <span class="main_keyword">out</span> <span class="main_type"><a href="ToxEncrypt.ERR_KEY_DERIVATION.html" class="enum">ERR_KEY_DERIVATION</a></span> error)
+        </div>
+        <div class="description">
+          <p>Generates a secret symmetric key from the given passphrase. out_key must be at least TOX_PASS_KEY_LENGTH bytes long. Be sure to not 
+            compromise the key! Only keep it in memory, do not write to disk. The password is zeroed after key derivation. The key should only be used
+            with the other functions in this module, as it includes a salt. Note that this function is not deterministic; to derive the same key from 
+            a password, you also must know the random salt that was used. See below.</p>
+          <p>returns true on success</p>
         </div><br/>
         <div class="namespace_note"><b>Namespace:</b> <a href="ToxEncrypt.html">ToxEncrypt</a>
         </div>

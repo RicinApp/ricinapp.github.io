@@ -59,35 +59,50 @@
           <ul class="navi_inline">
             <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">bool</span></span> <b><a href="ToxEncrypt.pass_encrypt.html" class="method">pass_encrypt</a></b> (<span class="main_basic_type"><span class="struct">uint8</span></span>[] data, <span class="main_basic_type"><span class="struct">uint8</span></span>[] passphrase, <span class="main_keyword">out</span> <span class="main_basic_type"><span class="struct">uint8</span></span>[] @out, <span class="main_keyword">out</span> <span class="main_type"><a href="ToxEncrypt.ERR_ENCRYPTION.html" class="enum">ERR_ENCRYPTION</a></span> error)
               </span>
-              <div class="leaf_brief_description">
+              <div class="leaf_brief_description"><span class="brief_description">Encrypts the given data with the given passphrase. The output array 
+                  must be at least data_len + TOX_PASS_ENCRYPTION_EXTRA_LENGTH bytes long. This delegates to tox_derive_key_from_pass and 
+                  tox_pass_key_encrypt.</span>
               </div></li>
             <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">bool</span></span> <b><a href="ToxEncrypt.pass_decrypt.html" class="method">pass_decrypt</a></b> (<span class="main_basic_type"><span class="struct">uint8</span></span>[] data, <span class="main_basic_type"><span class="struct">uint8</span></span>[] passphrase, <span class="main_keyword">out</span> <span class="main_basic_type"><span class="struct">uint8</span></span>[] @out, <span class="main_keyword">out</span> <span class="main_type"><a href="ToxEncrypt.ERR_DECRYPTION.html" class="enum">ERR_DECRYPTION</a></span> error)
               </span>
-              <div class="leaf_brief_description">
+              <div class="leaf_brief_description"><span class="brief_description">Decrypts the given data with the given passphrase. The output array 
+                  must be at least data_len - TOX_PASS_ENCRYPTION_EXTRA_LENGTH bytes long. This delegates to tox_pass_key_decrypt.</span>
               </div></li>
             <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">bool</span></span> <b><a href="ToxEncrypt.derive_key_from_pass.html" class="method">derive_key_from_pass</a></b> (<span class="main_basic_type"><span class="struct">uint8</span></span>[] passphrase, <span class="main_keyword">out</span> <span class="main_type"><a href="ToxEncrypt.PassKey.html" class="class">PassKey</a></span> out_key, <span class="main_keyword">out</span> <span class="main_type"><a href="ToxEncrypt.ERR_KEY_DERIVATION.html" class="enum">ERR_KEY_DERIVATION</a></span> error)
               </span>
-              <div class="leaf_brief_description">
+              <div class="leaf_brief_description"><span class="brief_description">Generates a secret symmetric key from the given passphrase. out_key 
+                  must be at least TOX_PASS_KEY_LENGTH bytes long. Be sure to not compromise the key! Only keep it in memory, do not write to disk. 
+                  The password is zeroed after key derivation. The key should only be used with the other functions in this module, as it includes a 
+                  salt. Note that this function is not deterministic; to derive the same key from a password, you also must know the random salt that 
+                  was used. See below.</span>
               </div></li>
             <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">bool</span></span> <b><a href="ToxEncrypt.derive_key_with_salt.html" class="method">derive_key_with_salt</a></b> (<span class="main_basic_type"><span class="struct">uint8</span></span>[] passphrase, <span class="main_basic_type"><span class="struct">uint8</span></span> salt, <span class="main_keyword">out</span> <span class="main_type"><a href="ToxEncrypt.PassKey.html" class="class">PassKey</a></span> out_key, <span class="main_keyword">out</span> <span class="main_type"><a href="ToxEncrypt.ERR_KEY_DERIVATION.html" class="enum">ERR_KEY_DERIVATION</a></span> error)
               </span>
-              <div class="leaf_brief_description">
+              <div class="leaf_brief_description"><span class="brief_description">Same as derive_key_from_pass, except use the given salt for 
+                  deterministic key derivation. The salt must be TOX_PASS_SALT_LENGTH bytes in length.</span>
               </div></li>
             <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">bool</span></span> <b><a href="ToxEncrypt.get_salt.html" class="method">get_salt</a></b> (<span class="main_basic_type"><span class="struct">uint8</span></span>[] data, <span class="main_keyword">out</span> <span class="main_basic_type"><span class="struct">uint8</span></span> salt)
               </span>
-              <div class="leaf_brief_description">
+              <div class="leaf_brief_description"><span class="brief_description">This retrieves the salt used to encrypt the given data, which can 
+                  then be passed to derive_key_with_salt to produce the same key as was previously used. Any encrpyted data with this module can be 
+                  used as input.</span>
               </div></li>
             <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">bool</span></span> <b><a href="ToxEncrypt.pass_key_encrypt.html" class="method">pass_key_encrypt</a></b> (<span class="main_basic_type"><span class="struct">uint8</span></span>[] data, <span class="main_type"><a href="ToxEncrypt.PassKey.html" class="class">PassKey</a></span> key, <span class="main_basic_type"><span class="struct">uint8</span></span> @out, <span class="main_keyword">out</span> <span class="main_type"><a href="ToxEncrypt.ERR_DECRYPTION.html" class="enum">ERR_DECRYPTION</a></span> error)
               </span>
-              <div class="leaf_brief_description">
+              <div class="leaf_brief_description"><span class="brief_description">Encrypt arbitrary with a key produced by tox_derive_key_*. The 
+                  output array must be at least data_len + TOX_PASS_ENCRYPTION_EXTRA_LENGTH bytes long. key must be TOX_PASS_KEY_LENGTH bytes. If you 
+                  already have a symmetric key from somewhere besides this module, simply call encrypt_data_symmetric in toxcore/crypto_core directly.
+                </span>
               </div></li>
             <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">bool</span></span> <b><a href="ToxEncrypt.pass_key_decrypt.html" class="method">pass_key_decrypt</a></b> (<span class="main_basic_type"><span class="struct">uint8</span></span>[] data, <span class="main_type"><a href="ToxEncrypt.PassKey.html" class="class">PassKey</a></span> key, <span class="main_basic_type"><span class="struct">uint8</span></span> @out, <span class="main_keyword">out</span> <span class="main_type"><a href="ToxEncrypt.ERR_DECRYPTION.html" class="enum">ERR_DECRYPTION</a></span> error)
               </span>
-              <div class="leaf_brief_description">
+              <div class="leaf_brief_description"><span class="brief_description">This is the inverse of tox_pass_key_encrypt, also using only keys 
+                  produced by tox_derive_key_from_pass.</span>
               </div></li>
             <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><span class="struct">bool</span></span> <b><a href="ToxEncrypt.is_data_encrypted.html" class="method">is_data_encrypted</a></b> (<span class="main_basic_type"><span class="struct">uint8</span></span>[] data)
               </span>
-              <div class="leaf_brief_description">
+              <div class="leaf_brief_description"><span class="brief_description">Determines whether or not the given data is encrypted (by checking 
+                  the magic number)</span>
               </div></li>
           </ul>
         </ul>
